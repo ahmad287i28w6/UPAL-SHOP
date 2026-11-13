@@ -1,35 +1,150 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>VIP MONEY STORE | Uang Properti Film & Konten</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UPAL SHOP — Bukan untuk semua orang, hanya untuk mereka yang terpilih</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { sans: ['"Inter Tight"', '"Helvetica Neue"', 'Arial', 'sans-serif'] },
+  colors: { ink: '#0b2a35', mist: '#e8f3f7', sky: '#7dd3f8', deep: '#0f3a46' } } } };
+</script>
 <style>
-:root{--gold:#d7aa43;--gold2:#f3d27b;--bg:#080808;--panel:#111;--muted:#c7c0b1}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#fff;font-family:Arial,sans-serif}
-header{padding:18px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #70551d;gap:12px;flex-wrap:wrap}
-.brand{color:var(--gold2);font-family:Georgia,serif;font-size:clamp(22px,4vw,34px);font-weight:bold}.brand small{display:block;color:#fff;font:11px Arial;letter-spacing:2px}
-nav a{color:#eee;text-decoration:none;margin:0 8px;font-size:13px}
-.hero{padding:55px 6%;display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center;background:radial-gradient(ellipse at 80% 50%,#4a3512 0,#171109 28%,#080808 68%)}
-h1{font: bold clamp(36px,7vw,66px) Georgia;color:var(--gold2);margin:0 0 12px}.hero p{font-size:18px;line-height:1.6;color:#eee}.notice{color:#f3d27b;border:1px solid #8b6a26;padding:12px;border-radius:8px;font-size:13px;line-height:1.5}
-.hero-art{border:1px solid #9b762c;border-radius:16px;min-height:220px;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#1c160b,#050505)}
-.stack{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}.note{width:145px;height:75px;border:2px solid #c5a04c;background:linear-gradient(135deg,#78603b,#d7c18b,#66502c);color:#241b0a;display:grid;place-items:center;font-weight:bold;transform:rotate(-7deg);box-shadow:0 10px 20px #000}.note:nth-child(2){transform:rotate(5deg);background:linear-gradient(135deg,#526d7a,#c4d3d7,#465a68)}.note:nth-child(3){transform:rotate(-2deg);background:linear-gradient(135deg,#536a4a,#c0d0a1,#4d6245)}
-.btn{display:inline-block;background:var(--gold);color:#160f02;padding:13px 20px;border:0;border-radius:6px;font-weight:bold;text-decoration:none;cursor:pointer;margin-top:10px}
-section{padding:30px 5%}h2{color:var(--gold2);font: bold 28px Georgia;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px}.card{background:var(--panel);border:1px solid #71551d;border-radius:10px;padding:15px;text-align:center}.mock{height:100px;display:grid;place-items:center;background:linear-gradient(135deg,#75603a,#d7c18b,#3e321c);color:#1a1408;font-weight:bold;border:2px solid #c9a24b;margin-bottom:12px}.price{color:var(--gold2);font-weight:bold;font-size:18px}.card p{color:var(--muted);font-size:13px;line-height:1.4}
-footer{border-top:1px solid #70551d;padding:25px 5%;color:#ccc;text-align:center;font-size:13px;line-height:1.7}
-@media(max-width:700px){.hero{grid-template-columns:1fr;padding-top:35px}.hero-art{min-height:170px}nav{width:100%}nav a{margin:0 5px 0 0}}
+:root { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background:#dfe6e9; color:#0b2a35; -webkit-font-smoothing:antialiased; }
+.glass { background:rgba(255,255,255,.18); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,.35); }
+.digits { writing-mode:vertical-rl; font-size:11px; letter-spacing:.2em; color:#9fdcf5; opacity:.55; user-select:none; animation:drift 14s linear infinite alternate; }
+@keyframes drift { from { transform:translateY(-8%); } to { transform:translateY(8%); } }
+@keyframes blurin { from { opacity:0; filter:blur(18px); } to { opacity:.8; filter:blur(0); } }
+.blurin { animation:blurin 1.2s ease-out both; }
+.link { position:relative; }
+.link::after { content:""; position:absolute; left:0; bottom:-3px; height:1px; width:100%; background:currentColor; transform:scaleX(0); transform-origin:left; transition:transform .3s; }
+.link:hover::after { transform:scaleX(1); }
+.field { border:1px solid rgba(255,255,255,.3); background:rgba(255,255,255,.1); padding:1rem 1.5rem; font-size:.875rem; outline:none; color:#fff; width:100%; }
+.field::placeholder { color:rgba(255,255,255,.6); }
+.field:focus-visible { border-color:#7dd3f8; box-shadow:0 0 0 2px #7dd3f8; }
+@media (prefers-reduced-motion:reduce) { .digits,.blurin { animation:none; } html { scroll-behavior:auto; } }
 </style>
 </head>
-<body>
-<header><div class="brand">♛ VIP MONEY STORE<small>UANG PROPERTI UNTUK FILM & KONTEN</small></div><nav><a href="#beranda">Beranda</a><a href="#produk">Produk</a><a href="#kontak">Kontak</a></nav></header>
-<main>
-<div class="hero" id="beranda"><div><h1>VIP MONEY STORE</h1><p>Uang properti premium untuk kebutuhan film, video, fotografi, panggung, dan produksi konten kreatif.</p><div class="notice"><b>PERHATIAN:</b> Semua produk adalah uang properti/spesimen, bukan uang resmi dan bukan alat pembayaran yang sah. Produk harus memiliki penanda PROP yang jelas dan permanen.</div><a class="btn" href="#produk">LIHAT KATALOG</a></div><div class="hero-art"><div class="stack"><div class="note">PROP<br>SPESIMEN</div><div class="note">PROP<br>BUKAN UANG</div><div class="note">UNTUK<br>PRODUKSI</div></div></div></div>
-<section id="produk"><h2>KATALOG PRODUK</h2><div class="grid">
-<div class="card"><div class="mock">PROP MONEY<br>PAKET A</div><b>Paket Properti Premium A</b><p>Contoh produk untuk kebutuhan produksi visual.</p><div class="price">Rp35.000 / paket</div></div>
-<div class="card"><div class="mock">PROP MONEY<br>PAKET B</div><b>Paket Properti Premium B</b><p>Contoh produk dengan desain spesimen yang jelas.</p><div class="price">Rp30.000 / paket</div></div>
-<div class="card"><div class="mock">PROP MONEY<br>PAKET C</div><b>Paket Properti Premium C</b><p>Untuk film, video, fotografi, dan panggung.</p><div class="price">Rp25.000 / paket</div></div>
-</div><p class="notice" style="margin-top:18px">Harga dan contoh produk di atas masih contoh. Ganti dengan produk, foto, dan harga yang benar sebelum toko dipublikasikan.</p></section>
-<section id="kontak"><h2>PEMESANAN</h2><p style="text-align:center;color:#ddd">Hubungi admin untuk informasi stok, pengiriman, dan pemesanan.</p><p style="text-align:center"><a class="btn" href="https://wa.me/6281234567890">HUBUNGI ADMIN VIA WHATSAPP</a></p><p class="notice">Nomor WhatsApp pada tombol masih contoh. Ganti 6281234567890 dengan nomor toko Anda sebelum digunakan.</p></section>
+<body class="font-sans">
+<main class="mx-auto max-w-[1440px] bg-mist">
+
+<section class="relative min-h-[100svh] overflow-hidden bg-gradient-to-b from-[#f2fafd] via-[#9cc4d3] to-deep" style="padding-top:env(safe-area-inset-top,0px)">
+  <div class="blurin absolute inset-0 bg-cover bg-center mix-blend-multiply" style="background-image:url(hero.jpg)"></div>
+  <div aria-hidden="true" class="absolute inset-0 flex justify-around overflow-hidden">
+    <span class="digits hidden sm:block">1001 0110 1100 0101 0011 1010 0110 1001 1100 0101</span>
+    <span class="digits hidden sm:block" style="animation-delay:-3s">0110 1001 1100 0101 0011 1010 1001 0110 1100 0101</span>
+    <span class="digits hidden sm:block" style="animation-delay:-6s">1100 0101 0011 1010 0110 1001 1001 0110 1100 0101</span>
+    <span class="digits" style="animation-delay:-9s">0011 1010 0110 1001 1100 0101 1001 0110 1100 0101</span>
+    <span class="digits hidden sm:block" style="animation-delay:-12s">1010 0110 1001 1100 0101 0011 1001 0110 1100 0101</span>
+  </div>
+
+  <header class="absolute inset-x-0 top-0 z-30 px-5 py-5 sm:px-8" style="top:env(safe-area-inset-top,0px)">
+    <div class="flex items-center justify-between">
+      <a href="#" aria-label="Beranda" class="inline-flex items-center gap-2 text-[15px] font-semibold">
+        <img src="data:image/png;base64,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" alt="Logo UPAL SHOP" class="h-11 w-auto rounded-md">
+        UPAL SHOP
+      </a>
+      <nav class="hidden gap-9 text-[11px] font-semibold uppercase tracking-wide md:flex">
+        <a href="#tentang" class="link">Tentang</a><a href="#layanan" class="link">Layanan</a><a href="#proses" class="link">Proses</a><a href="#klien" class="link">Klien</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#kontak" class="rounded-full bg-sky px-6 py-3 text-[11px] font-semibold uppercase tracking-wide transition hover:bg-white hover:shadow-lg sm:px-10 sm:py-4">Hubungi kami</a>
+        <button id="menuBtn" aria-label="Menu" aria-expanded="false" class="glass grid h-10 w-10 place-items-center rounded-full md:hidden">
+          <span class="relative block h-px w-4 bg-ink before:absolute before:-top-1.5 before:block before:h-px before:w-4 before:bg-ink after:absolute after:top-1.5 after:block after:h-px after:w-4 after:bg-ink"></span>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="glass mt-3 hidden flex-col gap-4 rounded-2xl p-5 text-sm font-semibold uppercase">
+      <a href="#tentang">Tentang</a><a href="#layanan">Layanan</a><a href="#proses">Proses</a><a href="#klien">Klien</a>
+    </nav>
+  </header>
+
+  <div class="absolute left-5 top-28 z-10 w-44 sm:left-8 sm:top-32 sm:w-56">
+    <div class="glass h-24 rounded-sm sm:h-28"></div>
+    <div class="mt-1 flex justify-between text-[10px] font-semibold uppercase text-white"><span>3+ tahun</span><span>Online 24/7</span></div>
+    <p class="mt-5 text-lg font-semibold uppercase leading-[1.05] text-white sm:text-xl">Layanan aman<br>untuk pelanggan<br>terpilih</p>
+  </div>
+  <p class="absolute bottom-24 right-5 z-10 max-w-[10rem] text-center text-[10px] font-semibold uppercase leading-tight text-white sm:bottom-32 sm:right-[18%]">Bukan untuk semua orang, hanya untuk mereka yang terpilih</p>
+  <h1 class="absolute -left-[1vw] bottom-[18%] z-10 whitespace-nowrap text-[23vw] font-medium leading-[0.8] tracking-[-0.05em] text-white lg:text-[18rem] xl:text-[20rem]">UPAL</h1>
+</section>
+
+<section id="tentang" class="grid gap-10 px-5 py-24 sm:px-8 md:grid-cols-12 md:py-36">
+  <p class="text-xs font-semibold uppercase md:col-span-3">Tentang kami</p>
+  <div class="md:col-span-9">
+    <h2 class="text-[9vw] font-medium uppercase leading-[0.95] tracking-[-0.04em] md:text-7xl">Mengutamakan pelayanan dan kepuasan pelanggan.</h2>
+    <div class="mt-14 grid grid-cols-2 gap-8 sm:grid-cols-4 border-t border-ink/20 pt-8">
+      <div><p class="text-4xl font-medium tracking-tight md:text-6xl">5.000+</p><p class="mt-1 text-xs">Klien terdaftar</p></div>
+      <div><p class="text-4xl font-medium tracking-tight md:text-6xl">3+</p><p class="mt-1 text-xs">Tahun pengalaman</p></div>
+      <div><p class="text-4xl font-medium tracking-tight md:text-6xl">98%</p><p class="mt-1 text-xs">Indeks kepuasan</p></div>
+      <div><p class="text-4xl font-medium tracking-tight md:text-6xl">24/7</p><p class="mt-1 text-xs">Dukungan pelanggan</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="layanan" class="bg-deep px-5 py-24 text-white sm:px-8 md:py-36">
+  <h2 class="text-[11vw] font-medium uppercase leading-[0.9] tracking-[-0.05em] md:text-[9rem]">Layanan</h2>
+  <div class="mt-14 grid gap-5 md:grid-cols-3">
+    <article class="glass rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:bg-sky hover:text-ink"><h3 class="text-2xl font-medium uppercase leading-none">IP Transaction Security</h3><p class="mt-16 text-sm leading-relaxed">Klaim transaksi aman.</p></article>
+    <article class="glass rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:bg-sky hover:text-ink"><h3 class="text-2xl font-medium uppercase leading-none">Premium Order Verification</h3><p class="mt-16 text-sm leading-relaxed">Klaim verifikasi pesanan.</p></article>
+    <article class="glass rounded-3xl p-7 transition duration-300 hover:-translate-y-1 hover:bg-sky hover:text-ink"><h3 class="text-2xl font-medium uppercase leading-none">Guaranteed Refund Service</h3><p class="mt-16 text-sm leading-relaxed">Klaim jaminan pengembalian dana.</p></article>
+  </div>
+</section>
+
+<section id="proses" class="px-5 py-24 sm:px-8 md:py-36">
+  <h2 class="text-[9vw] font-medium uppercase leading-[0.95] tracking-[-0.04em] md:text-7xl">Cara kami bekerja</h2>
+  <p class="mt-4 text-sm font-semibold uppercase">Our Operational Process</p>
+  <ol class="mt-14 divide-y divide-ink/20 border-y border-ink/20">
+    <li class="grid gap-2 py-6 transition hover:bg-white/50 md:grid-cols-12 md:items-center md:px-2"><span class="text-xs font-semibold md:col-span-1">1</span><h3 class="text-2xl font-medium uppercase md:col-span-5">Order Submission</h3><p class="text-sm md:col-span-6">Setiap permintaan pesanan dicatat melalui sistem penerimaan.</p></li>
+    <li class="grid gap-2 py-6 transition hover:bg-white/50 md:grid-cols-12 md:items-center md:px-2"><span class="text-xs font-semibold md:col-span-1">2</span><h3 class="text-2xl font-medium uppercase md:col-span-5">Order Assessment</h3><p class="text-sm md:col-span-6">Informasi pesanan ditinjau untuk memastikan kelengkapan data.</p></li>
+    <li class="grid gap-2 py-6 transition hover:bg-white/50 md:grid-cols-12 md:items-center md:px-2"><span class="text-xs font-semibold md:col-span-1">3</span><h3 class="text-2xl font-medium uppercase md:col-span-5">Payment Confirmation</h3><p class="text-sm md:col-span-6">Status pembayaran diperiksa dan dicatat secara administratif.</p></li>
+    <li class="grid gap-2 py-6 transition hover:bg-white/50 md:grid-cols-12 md:items-center md:px-2"><span class="text-xs font-semibold md:col-span-1">4</span><h3 class="text-2xl font-medium uppercase md:col-span-5">Order Processing</h3><p class="text-sm md:col-span-6">Pesanan yang memenuhi ketentuan diteruskan ke tahap pemrosesan.</p></li>
+    <li class="grid gap-2 py-6 transition hover:bg-white/50 md:grid-cols-12 md:items-center md:px-2"><span class="text-xs font-semibold md:col-span-1">5</span><h3 class="text-2xl font-medium uppercase md:col-span-5">Status Notification</h3><p class="text-sm md:col-span-6">Pelanggan menerima informasi perkembangan pesanan.</p></li>
+    <li class="grid gap-2 py-6 transition hover:bg-white/50 md:grid-cols-12 md:items-center md:px-2"><span class="text-xs font-semibold md:col-span-1">6</span><h3 class="text-2xl font-medium uppercase md:col-span-5">Service Completion</h3><p class="text-sm md:col-span-6">Proses administrasi ditutup setelah layanan selesai.</p></li>
+  </ol>
+</section>
+
+<section id="klien" class="px-5 pb-24 sm:px-8 md:pb-36">
+  <figure class="rounded-3xl bg-gradient-to-br from-white/70 to-sky/40 p-8 md:p-16">
+    <blockquote class="text-2xl font-medium leading-tight tracking-tight md:text-5xl">“Bukan untuk semua orang, hanya untuk mereka yang terpilih.”</blockquote>
+    <figcaption class="mt-8 text-sm">UPAL SHOP</figcaption>
+  </figure>
+</section>
+
+<section id="kontak" class="bg-gradient-to-b from-deep to-ink px-5 py-24 text-white sm:px-8 md:py-36">
+  <h2 class="text-[11vw] font-medium uppercase leading-[0.9] tracking-[-0.05em] md:text-[9rem]">Mari bicara</h2>
+  <div class="mt-14 grid gap-12 md:grid-cols-2">
+    <div class="space-y-2 text-lg">
+      <p><a class="link" href="mailto:akualex106@gmail.com">akualex106@gmail.com</a></p>
+      
+      <p><a class="link" href="tel:085600779474">0856-0077-9474</a></p>
+      <p class="opacity-70">Dukungan pelanggan 24/7</p>
+    </div>
+    <form id="waForm" class="grid gap-4">
+      <input class="field rounded-full" id="waNama" placeholder="Nama" required>
+      <textarea class="field rounded-3xl" id="waPesan" rows="4" placeholder="Ceritakan kebutuhan Anda" required></textarea>
+      <button class="justify-self-start rounded-full bg-sky px-10 py-4 text-[11px] font-semibold uppercase tracking-wide text-ink transition hover:bg-white">Kirim lewat WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer class="flex flex-wrap items-center justify-between gap-4 bg-ink px-5 py-8 text-xs text-white sm:px-8" style="padding-bottom:calc(2rem + env(safe-area-inset-bottom,0px))">
+  <span class="inline-flex items-center gap-2 text-[15px] font-semibold"><img src="data:image/png;base64,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" alt="Logo UPAL SHOP" class="h-12 w-auto rounded-md">UPAL SHOP</span>
+  <p class="opacity-70">© 2026 UPAL SHOP. Seluruh hak dilindungi.</p>
+</footer>
 </main>
-<footer>VIP MONEY STORE · Uang properti untuk kebutuhan produksi kreatif.<br>Seluruh produk wajib ditandai PROP / SPESIMEN dan tidak boleh digunakan sebagai alat pembayaran atau untuk menipu.</footer>
-</body></html>
+<script>
+var b=document.getElementById('menuBtn'),n=document.getElementById('mobileNav');
+b.addEventListener('click',function(){var o=n.classList.toggle('hidden');n.classList.toggle('flex',!o);b.setAttribute('aria-expanded',String(!o));});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.add('hidden');n.classList.remove('flex');}});
+</script>
+<script>
+document.getElementById('waForm').addEventListener('submit',function(e){e.preventDefault();
+var t='Halo UPAL SHOP, saya '+document.getElementById('waNama').value+'. '+document.getElementById('waPesan').value;
+window.open('https://wa.me/6285600779474?text='+encodeURIComponent(t),'_blank');});
+</script>
+</body>
+</html>
